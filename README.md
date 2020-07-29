@@ -33,7 +33,7 @@ Creation of this project was sponsored by **[OK GROW!](https://www.okgrow.com/)*
 ## Installation
 
 ```
-npm install --save react-native-copilot
+npm install --save @ant-tech/react-native-copilot
 ```
 
 **Optional**: If you want to have the smooth SVG animation, you should install and link `react-native-svg`. If you are using Expo, **you can skip** this as Expo comes with `react-native-svg`.
@@ -48,7 +48,7 @@ react-native link react-native-svg
 Use the `copilot()` higher order component for the screen component that you want to use copilot with:
 
 ```js
-import { copilot } from "react-native-copilot";
+import { copilot } from "@ant-tech/react-native-copilot";
 
 class HomeScreen extends Component {
   /* ... */
@@ -60,7 +60,7 @@ export default copilot()(HomeScreen);
 Before defining walkthrough steps for your react elements, you must make them `walkthroughable`. The easiest way to do that for built-in react native components, is using the `walkthroughable` HOC. Then you must wrap the element with `CopilotStep`.
 
 ```js
-import { copilot, walkthroughable, CopilotStep } from "react-native-copilot";
+import { copilot, walkthroughable, CopilotStep } from "@ant-tech/react-native-copilot";
 
 const CopilotText = walkthroughable(Text);
 
@@ -245,7 +245,7 @@ copilot({
 The components wrapped inside `CopilotStep`, will receive a `copilot` prop of type `Object` which the outermost rendered element of the component or the element that you want the tooltip be shown around, must extend.
 
 ```js
-import { copilot, CopilotStep } from "react-native-copilot";
+import { copilot, CopilotStep } from "@ant-tech/react-native-copilot";
 
 const CustomComponent = ({ copilot }) => (
   <View {...copilot}>
@@ -306,7 +306,7 @@ eg `this.props.start(false, ScrollViewRef)`
 
 ```js
 import { ScrollView } from "react-native";
-import { copilot } from "@okgrow/react-native-copilot";
+import { copilot } from "@ant-tech/react-native-copilot";
 
 class HomeScreen {
   componentDidMount() {
@@ -339,7 +339,7 @@ List of available events is:
 **Example:**
 
 ```js
-import { copilot, CopilotStep } from "react-native-copilot";
+import { copilot, CopilotStep } from "@ant-tech/react-native-copilot";
 
 const CustomComponent = ({ copilot }) => (
   <View {...copilot}>
