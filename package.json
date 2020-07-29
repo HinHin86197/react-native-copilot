@@ -1,5 +1,5 @@
 {
-  "name": "react-native-copilot",
+  "name": "@ant-tech/react-native-copilot",
   "version": "1.0.0",
   "description": "Make an interactive step by step tour guide for you react-native app",
   "main": "src/index.js",
